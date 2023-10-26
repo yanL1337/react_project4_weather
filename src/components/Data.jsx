@@ -1,12 +1,12 @@
 import { useEffect, useRef, useState } from "react";
 import { fetchData } from "../assets/func.js";
 import DataOutput from "./DataOutput";
+import { api_key } from "../config.js";
 
 const Data = () => {
   const [data, setData] = useState();
   const [city, setCity] = useState("hamburg");
 
-  const api_key = "720e73f618d846a3934b1ea09ecb5cf4";
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${api_key}&lang=de&units=metric`;
 
   const dataFetch = (event) => {
